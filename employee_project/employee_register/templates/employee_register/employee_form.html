@@ -1,0 +1,144 @@
+{% extends "employee_register/base.html" %}       
+
+{% block content %}
+<!-- <td><a href="{% url 'employee_list' %}">Back to list</a></td>
+
+<p>employee form</p>
+
+<form action="" method="post">
+    {%csrf_token%}
+    {{form}}
+    <button type="submit"></button>
+</form> -->
+   
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .back-link {
+            display: block; /* Change to block for full width */
+            margin-bottom: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            padding: 10px 15px; /* Adjust padding for button effect */
+            border: 1px solid #007bff; /* Border to match the link color */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+            width: fit-content; /* Fit content to width */
+            margin: 0 auto; /* Center the block */
+        }
+
+        .back-link:hover {
+            background-color: #007bff; /* Change background on hover */
+            color: white; /* Change text color on hover */
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+            font-size: 28px; /* Increased font size */
+            font-weight: bold; /* Make it bold */
+            border-bottom: 2px solid #007bff; /* Add a decorative border below */
+            padding-bottom: 10px; /* Padding below the heading */
+            letter-spacing: 1px; /* Slightly increase spacing between letters */
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column; /* Stack label and input vertically */
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <a href="{% url 'employee_list' %}" class="back-link">Back to List</a>
+        <h2>Employee Form</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.fullname.label_tag }}
+                {{ form.fullname }}
+            </div>
+            <div class="form-group">
+                {{ form.emp_code.label_tag }}
+                {{ form.emp_code }}
+            </div>
+            <div class="form-group">
+                {{ form.mobile.label_tag }}
+                {{ form.mobile }}
+            </div>
+            <div class="form-group">
+                {{ form.position.label_tag }}  <!-- Add Position label -->
+                {{ form.position }}            <!-- Add Position dropdown -->
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+{% endblock content %}
