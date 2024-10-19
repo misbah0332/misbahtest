@@ -89,14 +89,13 @@ WSGI_APPLICATION = 'employee_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'employeedbmysql',   # Name of your MySQL database
-        'USER': 'root',        # MySQL username
+        'NAME': 'misbah0332$default',   # Name of your MySQL database
+        'USER': 'misbah0332',        # MySQL username
         'PASSWORD': 'Misbah_0099',    # MySQL password
         'HOST': 'localhost',            # Or '127.0.0.1'
         'PORT': '3306',                 # Default MySQL port
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
