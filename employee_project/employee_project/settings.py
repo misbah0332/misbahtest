@@ -92,7 +92,7 @@ DATABASES = {
         'NAME': 'misbah0332$default',   # Name of your MySQL database
         'USER': 'misbah0332',        # MySQL username
         'PASSWORD': 'Misbah_0099',    # MySQL password
-        'HOST': 'misbah0332.pythonanywhere.com',            # Or '127.0.0.1'
+        'HOST': 'misbah0332.mysql.pythonanywhere-services.com',            # Or '127.0.0.1' 
         'PORT': '3306',                 # Default MySQL port
     }
 }
